@@ -8,63 +8,36 @@
   </head>
   <body>
     <section>
-      <div class="calculator">
-        <div>
-          <span>0</span>
-          <span>\</span>
-        </div>
+      <!-- <form action="#">
+
+          <input type="text" name="display" placeholder="0/">
         <div class="all-btn">
           <div class="btns">
-            <ul>
-              <li>MC</li>
-              <li>MR</li>
-              <li>M+</li>
-              <li>M-</li>
-              <li>MS</li>
-              <li>M</li>
-            </ul>
+
           </div>
           <div class="cal-btns">
-            <ul>
-              <li>%</li>
-              <li>CE</li>
-              <li>C</li>
-              <li>back</li>
-            </ul>
-            <ul>
-              <li>1/x</li>
-              <li>x*2</li>
-              <li>2</li>
-              <li>%</li>
-            </ul>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>*</li>
-            </ul>
-            <ul>
-              <li>4</li>
-              <li>5</li>
-              <li>6</li>
-              <li>-</li>
-            </ul>
-            <ul>
-              <li>7</li>
-              <li>8</li>
-              <li>9</li>
-              <li>+</li>
-            </ul>
-            <ul>
-              <li>+/-</li>
-              <li>0</li>
-              <li>.</li>
-              <li>=</li>
-            </ul>
+                <input type="button" value="4" onclick="display.value += '4' ">
+                <input type="button" value="+" onclick="display.value += '+' ">
+                  <input type="button" value="DEL" onclick="display.value = display.value.toString().slice(0,-1); console.log(display.value);
+                   ">
+                     <input type="button" value="=" onclick="display.value = eval(display.value);
+                   ">
+                     <input type="button" value="Ac" onclick="display.value= ''" ;
+                   ">
           </div>
         </div>
-      </div>
+      </form>  -->
+      
+      <input type="text" placeholder="0/" id="input-field">
+
+      <button>4</button>
+      <button>=</button>
+      <button>+</button>
+      <button>DEL</button>
+       <button>AC</button>
     </section>
+
+
 
     <script src="script.js"></script>
   </body>

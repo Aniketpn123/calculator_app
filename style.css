@@ -22,11 +22,12 @@ section{
   background:linear-gradient(60deg , rgba(0, 0, 0, 0.21) 50% , rgba(249, 104, 104, 0.588) 50%);
 }
 
-input{
+.input-field{
   width: 100%;
   font-weight: 400;
   font-size: 1.5rem;
   padding: 10px 20px;
+  border: 2px solid red;
 }
 
 .calculator{
@@ -60,6 +61,5 @@ input{
 }
 
 .cal-btns li{
-
 border: 2px solid black;
 }
