@@ -21,6 +21,12 @@ buttons.forEach((button)=>{
          inputField.value=task;
          return;
       }
+
+         if(e.target.innerHTML == 'x'){
+         task += "*";
+         inputField.value=task;
+         return;
+      }
       task += e.target.innerHTML;
       inputField.value=task
    })
