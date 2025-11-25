@@ -50,7 +50,7 @@ buttons.forEach((btn) => {
 
 function displayTask() {
   store();
-  inputField.value = task;
+  inputField.value.toString() = task;
 }
 
 
