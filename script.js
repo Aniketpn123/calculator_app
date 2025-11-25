@@ -1,34 +1,59 @@
-let task= "";
 const buttons = document.querySelectorAll('button');
-const inputField=document.querySelector('input');
+const inputField = document.querySelector('input');
 
-buttons.forEach((button)=>{
-   button.addEventListener('click',(e)=>{
-      if(e.target.innerHTML == '='){
-         task = eval(task);
-         inputField.value=task;
-         return;
-      }
+let task = localStorage.getItem('task') || '';
 
-      if(e.target.innerHTML == 'DEL'){
-         task= task.slice(0,-1);
-         inputField.value=task;
-         return;
-      }
+displayTask();
+buttons.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    if (e.target.innerHTML == '=') {
+      task = eval(task);
+      displayTask();
+      return;
+    }
+    if (e.target.innerHTML.toUpperCase() === 'C') {
+      task = '';
+      displayTask();
 
-      if(e.target.innerHTML == 'AC'){
-         task="";
-         inputField.value=task;
-         return;
-      }
+      return;
+    }
+    if (e.target.innerText.trim() == '<') {
+      task = task.slice(0, -1);
 
-         if(e.target.innerHTML == 'x'){
+      displayTask();
+
+      return;
+    }
+    if(e.target.innerText.trim() === 'X'){
          task += "*";
-         inputField.value=task;
-         return;
-      }
-      task += e.target.innerHTML;
-      inputField.value=task
-   })
-})
+         displayTask();
+         return;  
+    }
 
+    if(e.target.innerHTML=== '+/-'){
+      if(task.charAt(0) === '-'){
+        task = task.slice(1);
+      }
+      else{
+        task = '-' + task;
+      }
+        displayTask();
+         return;  
+    }
+
+    inputField.innerHTML = task;
+    task += e.target.innerHTML;
+
+    displayTask();
+  });
+});
+
+function displayTask() {
+  store();
+  inputField.value = task;
+}
+
+
+function store() {
+  localStorage.setItem('task', task);
+}

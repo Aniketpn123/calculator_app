@@ -22,44 +22,11 @@ section{
   background:linear-gradient(60deg , rgba(0, 0, 0, 0.21) 50% , rgba(249, 104, 104, 0.588) 50%);
 }
 
-.input-field{
-  width: 100%;
-  font-weight: 400;
-  font-size: 1.5rem;
+button{
   padding: 10px 20px;
-  border: 2px solid red;
 }
 
-.calculator{
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.all-btn{
-    border: 2px solid red;
-}
-
-.btns{
-  border: 2px solid red;
-
-}
-
-.btns ul{
-  display: flex;
-  justify-content: space-around;
-}
-
-.btns li{
-  border: 2px solid black;
-}
-
-.cal-btns{
-  display: flex;
-  justify-content: space-around;
-}
-
-.cal-btns li{
-border: 2px solid black;
+input[type="text"]{
+padding: 10px 20px;
+text-align: right;
 }
