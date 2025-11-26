@@ -6,7 +6,7 @@ displayTask();
 
 inputField.addEventListener('input', (e) => {  
   task = inputField.value;
-  store();
+  displayTask();
 });
 inputField.addEventListener('keypress', (e) => {
   const allowed = /[0-9+\-*/.%]/;
@@ -14,11 +14,18 @@ inputField.addEventListener('keypress', (e) => {
   if (!allowed.test(e.key)) {
     e.preventDefault(); // Stop the wrong character
   }
+  if (e.key ==='Enter'){
+    task =eval(task);
+    displayTask();
+  }
 });
 
 buttons.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     if (e.target.innerHTML == '=') {
+      if(task.trim()==''){
+        return;
+      }
       task = eval(task);
       displayTask();
       return;

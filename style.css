@@ -78,4 +78,5 @@ button{
   align-items: center;
   background: rgb(202, 200, 200);
  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.07);
+ cursor: pointer;
 }
